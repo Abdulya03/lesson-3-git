@@ -244,6 +244,9 @@
   .resize {
     resize: both;
   }
+  .items-baseline-last {
+    align-items: last baseline;
+  }
   .items-center {
     align-items: center;
   }
