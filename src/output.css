@@ -205,6 +205,9 @@
   .w-80 {
     width: calc(var(--spacing) * 80);
   }
+  .w-\[\%\] {
+    width: %;
+  }
   .w-\[20\%\] {
     width: 20%;
   }
@@ -286,6 +289,9 @@
   }
   .bg-\[\#0075FF\] {
     background-color: #0075FF;
+  }
+  .bg-\[\#211F54\] {
+    background-color: #211F54;
   }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
