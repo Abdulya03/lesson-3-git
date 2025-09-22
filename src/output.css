@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-600: oklch(66.6% 0.179 58.318);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-black: #000;
@@ -189,8 +190,20 @@
   .w-100 {
     width: calc(var(--spacing) * 100);
   }
+  .w-\[20\%\] {
+    width: 20%;
+  }
+  .w-\[30\%\] {
+    width: 30%;
+  }
   .w-\[45\%\] {
     width: 45%;
+  }
+  .w-\[50\%\] {
+    width: 50%;
+  }
+  .w-\[70\%\] {
+    width: 70%;
   }
   .w-\[80\%\] {
     width: 80%;
@@ -206,6 +219,9 @@
   }
   .w-\[\[80\]\] {
     width: [80];
+  }
+  .w-full {
+    width: 100%;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -247,6 +263,9 @@
   .bg-\[\#0075FF\] {
     background-color: #0075FF;
   }
+  .bg-amber-600 {
+    background-color: var(--color-amber-600);
+  }
   .px-\[25px\] {
     padding-inline: 25px;
   }
@@ -256,6 +275,9 @@
   .py-\[15px\] {
     padding-block: 15px;
   }
+  .py-\[50px\] {
+    padding-block: 50px;
+  }
   .text-center {
     text-align: center;
   }
@@ -264,6 +286,9 @@
   }
   .text-\[40px\] {
     font-size: 40px;
+  }
+  .text-\[55px\] {
+    font-size: 55px;
   }
   .text-\[70px\] {
     font-size: 70px;
@@ -293,6 +318,14 @@
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .shadow-2xl {
+    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-2xs {
+    --tw-shadow: 0 1px var(--tw-shadow-color, rgb(0 0 0 / 0.05));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .outline {
     outline-style: var(--tw-outline-style);
@@ -332,11 +365,6 @@
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-shadow {
   syntax: "*";
@@ -403,12 +431,16 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
@@ -423,6 +455,7 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
     }
   }
 }
